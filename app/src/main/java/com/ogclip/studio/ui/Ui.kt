@@ -13,14 +13,14 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 
-/** Tiny UI toolkit: Matte Black, Metallic Gold, Fiery Red, small white accents. Built in code to keep the APK lean. */
+/** Tiny UI toolkit: Black, Orange (logo colors), Red-Orange, white accents. Built in code to keep the APK lean. */
 object Ui {
-    val BLACK = Color.parseColor("#0E0E10")
-    val CARD = Color.parseColor("#1A1A1D")
-    val GOLD = Color.parseColor("#D4AF37")
-    val RED = Color.parseColor("#E0301E")
+    val BLACK = Color.parseColor("#000000")
+    val CARD = Color.parseColor("#0A0A0A")
+    val GOLD = Color.parseColor("#FF8A00")
+    val RED = Color.parseColor("#FF4D00")
     val WHITE = Color.parseColor("#F5F5F5")
-    val MUTED = Color.parseColor("#9A9AA0")
+    val MUTED = Color.parseColor("#A9A9A9")
 
     const val MATCH = ViewGroup.LayoutParams.MATCH_PARENT
     const val WRAP = ViewGroup.LayoutParams.WRAP_CONTENT
@@ -70,7 +70,7 @@ object Ui {
         val c = LinearLayout(ctx)
         c.orientation = LinearLayout.VERTICAL
         c.setPadding(dp(ctx, 16), dp(ctx, 14), dp(ctx, 16), dp(ctx, 14))
-        c.background = bg(ctx, CARD, 16, Color.parseColor("#2A2A2E"), 1)
+        c.background = bg(ctx, CARD, 16, Color.parseColor("#33FF8A00"), 1)
         return c
     }
 
@@ -82,7 +82,7 @@ object Ui {
         fun paint(sel: Int) {
             for (i in views.indices) {
                 val on = i == sel
-                views[i].background = bg(ctx, if (on) GOLD else BLACK, 10, if (on) GOLD else Color.parseColor("#3A3A3F"), 1)
+                views[i].background = bg(ctx, if (on) GOLD else BLACK, 10, if (on) GOLD else Color.parseColor("#444444"), 1)
                 views[i].setTextColor(if (on) BLACK else WHITE)
             }
         }
@@ -123,7 +123,7 @@ object Ui {
         bar.addView(text(a, title, 20f, GOLD, true))
         root.addView(bar)
         val line = View(a)
-        line.setBackgroundColor(Color.parseColor("#55D4AF37"))
+        line.setBackgroundColor(Color.parseColor("#55FF8A00"))
         root.addView(line, LinearLayout.LayoutParams(MATCH, dp(a, 1)))
         a.setContentView(root)
         return root

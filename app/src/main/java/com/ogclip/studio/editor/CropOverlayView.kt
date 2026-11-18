@@ -20,7 +20,7 @@ class CropOverlayView(ctx: Context) : View(ctx) {
 
     private val dim = Paint().apply { color = Color.argb(170, 0, 0, 0) }
     private val line = Paint().apply {
-        color = Color.parseColor("#D4AF37")
+        color = Color.parseColor("#FF8A00")
         style = Paint.Style.STROKE
         strokeWidth = 4f
     }

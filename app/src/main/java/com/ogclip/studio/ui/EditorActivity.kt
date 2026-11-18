@@ -218,7 +218,7 @@ class EditorActivity : Activity() {
         textInput.setPadding(Ui.dp(this, 12), Ui.dp(this, 10), Ui.dp(this, 12), Ui.dp(this, 10))
         tx.addView(textInput, Ui.lp(this, topDp = 8))
         tx.addView(Ui.chips(this, listOf("Top", "Centre", "Bottom"), textPos) { i -> textPos = i }, Ui.lp(this, topDp = 8))
-        tx.addView(Ui.chips(this, listOf("White", "Gold"), if (textGold) 1 else 0) { i -> textGold = i == 1 }, Ui.lp(this, topDp = 8))
+        tx.addView(Ui.chips(this, listOf("White", "Orange"), if (textGold) 1 else 0) { i -> textGold = i == 1 }, Ui.lp(this, topDp = 8))
         c.addView(tx, Ui.lp(this, topDp = 12))
 
         // ---- logo

@@ -128,7 +128,7 @@ class ShortsExporter(private val ctx: Context) {
         val sp = SpannableString(spec.text)
         val end = sp.length
         sp.setSpan(AbsoluteSizeSpan(px), 0, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-        sp.setSpan(ForegroundColorSpan(if (spec.textGold) Color.parseColor("#D4AF37") else Color.WHITE), 0, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        sp.setSpan(ForegroundColorSpan(if (spec.textGold) Color.parseColor("#FF8A00") else Color.WHITE), 0, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         sp.setSpan(BackgroundColorSpan(Color.argb(150, 0, 0, 0)), 0, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         sp.setSpan(StyleSpan(android.graphics.Typeface.BOLD), 0, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         val y = when (spec.textPos) {
