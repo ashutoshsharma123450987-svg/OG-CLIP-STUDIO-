@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">OG CLIP STUDIO</string>
+    <string name="hotkey_desc">Used only to detect your CLIP NOW keyboard shortcut. It does not read screen content and stores nothing.</string>
+</resources>
