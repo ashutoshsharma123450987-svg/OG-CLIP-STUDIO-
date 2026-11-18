@@ -18,7 +18,7 @@ jobs:
           for f in *__*; do
             dest="${f//__//}"
             mkdir -p "$(dirname "$dest")"
-            git mv "$f" "$dest"
+            git mv -f "$f" "$dest"
           done
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
